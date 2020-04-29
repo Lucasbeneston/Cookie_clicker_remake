@@ -1,3 +1,4 @@
-body{
-    font-family: cursive;
+@font-face {
+font-family: "merriweather", serif;
+src: url(../../assets/fonts/merriweather/merriweather-regular.ttf) format("ttf");
 }

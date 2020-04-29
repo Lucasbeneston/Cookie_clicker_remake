@@ -8,6 +8,8 @@
 
 @import "layout/_production.css";
 
+@import "layout/_separateurs.css";
+
 @import "layout/_store.css";
 
 @import "pages/_body.css";

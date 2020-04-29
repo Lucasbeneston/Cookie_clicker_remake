@@ -1,0 +1,5 @@
+.separator{
+    background-image: url(../../assets/images/panel-vertical.png);
+    width: 16px;
+    height: 100vh;
+}

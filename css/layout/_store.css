@@ -1,0 +1,7 @@
+#store{
+    height: 100vh;
+    padding-top: 15px;
+    min-width: 150px;
+    max-width: 300px;
+    flex-grow: 1;
+}

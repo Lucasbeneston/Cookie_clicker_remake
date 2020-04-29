@@ -1,0 +1,6 @@
+#production{
+    height: 100vh;
+    padding-top: 15px;
+    min-width: 500px;
+    flex-grow: 2;
+}

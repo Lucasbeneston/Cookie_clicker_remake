@@ -1,0 +1,7 @@
+#bakery{
+    height: 100vh;
+    padding-top: 15px;
+    min-width: 250px;
+    max-width: 400px;
+    flex-grow: 1;
+}
