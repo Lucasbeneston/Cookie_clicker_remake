@@ -4,4 +4,37 @@
     min-width: 250px;
     max-width: 400px;
     flex-grow: 1;
+    background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.25) 35%, rgba(0,0,0,1) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#cookies{
+    text-align: center;
+    width: 100%;
+    background-color: rgba(0,0,0,0.35);
+    padding: 7.5px;
+}
+
+#bigCookie{
+    height: 200px;
+    width: 200px;
+    background-image: url(../../assets/images/perfect-cookie.png);
+    background-size: cover;
+    background-color: rgba(255,255,255,0.38);
+    border-radius: 50%;
+    box-shadow: 0px 0px 75px 0px rgba(255,255,255,0.90);
+    margin-top: 75px;
+    cursor: pointer;
+}
+
+#bigCookie:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+#bigCookie:active{
+    transform: scale(0.95);
+    transition: 0.5s;
 }
