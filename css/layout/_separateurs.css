@@ -4,3 +4,11 @@
     height: 100vh;
     z-index: 99;
 }
+
+hr{
+    content: url(../../assets/images/panel-horizontal.png);
+    height: 16px;
+    margin-top: 15px;
+    border: none;
+}
+

@@ -27,14 +27,13 @@
     box-shadow: 0px 0px 75px 0px rgba(255,255,255,0.90);
     margin-top: 75px;
     cursor: pointer;
+    transition: transform 0.5s;
 }
 
 #bigCookie:hover{
     transform: scale(1.1);
-    transition: 0.5s;
 }
 
 #bigCookie:active{
     transform: scale(0.95);
-    transition: 0.5s;
 }
