@@ -27,5 +27,3 @@ export default class Bakery{
         return this._buidlings
     }
 }
-
-console.log("hello Bakery");

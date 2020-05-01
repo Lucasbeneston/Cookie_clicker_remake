@@ -1,5 +1,5 @@
 // Exporter "updateBakery" dans main.mjs
-export function updateBakery(element){
+export default function updateBakery(element){
 
     // Pour séléctionner le titre h2 de l'id bakery
     let bakeryName = document.querySelector('#bakery h2');
