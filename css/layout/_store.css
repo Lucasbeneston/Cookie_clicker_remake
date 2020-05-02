@@ -24,7 +24,7 @@
     height: 16px;
     border: none;
     margin-top: 15px;
-    padding-top: 15px;
+    padding-top: 16px;
 }
 
 #buildings::before{
@@ -36,7 +36,7 @@
     text-transform: uppercase;
     font-weight: bold;
     opacity: 0;
-    margin-top: -15px;
+    margin-top: -16px;
 }
 
 #buildings:hover::before{

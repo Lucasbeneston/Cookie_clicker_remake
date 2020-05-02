@@ -1,12 +1,16 @@
 export default class Bakery{
-    constructor(name = "Simplon Bakery", cookies = 0, coockiesPerClick = 1, coockiesPerSecond = 0){
+    constructor(name = "Simplon Bakery", cookies = 0, cookiesPerClick = 1, cookiesPerSecond = 0){
         this._name = name
         this._cookies = cookies
-        this._coockiesPerClick = coockiesPerClick
-        this._coockiesPerSecond = coockiesPerSecond
+        this._cookiesPerClick = cookiesPerClick
+        this._cookiesPerSecond = cookiesPerSecond
         this._buidlings = []
         }
 
+    bakeCookies(){
+        return this._cookies++ 
+    }
+    
     get name(){
         return this._name
     }
@@ -15,12 +19,12 @@ export default class Bakery{
         return this._cookies
     }
 
-    get coockiesPerClick(){
-        return this._coockiesPerClick
+    get cookiesPerClick(){
+        return this._cookiesPerClick
     }
 
-    get coockiesPerSecond(){
-        return this._coockiesPerSecond
+    get cookiesPerSecond(){
+        return this._cookiesPerSecond
     }
 
     get buidlings(){
