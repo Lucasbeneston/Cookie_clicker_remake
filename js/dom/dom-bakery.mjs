@@ -28,4 +28,8 @@ export const clickCookie = (element) => {
 
         animationText.style.top = event.clientY + "px";
         animationText.style.left = event.clientX + "px";
+
+        bigCookie.addEventListener('animationend', () =>{
+            bigCookie.removeChild(animationText);
+        })
     })}

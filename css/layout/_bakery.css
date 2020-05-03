@@ -42,15 +42,15 @@
 .animationText{
     position: absolute;
     margin-top: -215px;
-    margin-left: -80px;
+    margin-left: -90px;
     font-size: 1.3rem;
 
     animation-duration: 3s;
-    animation-name: opacity;
+    animation-name: opacityAnimation;
     opacity: 0;
 }
   
-  @keyframes opacity {
+  @keyframes opacityAnimation {
     0%{
         opacity: 1;
     }
