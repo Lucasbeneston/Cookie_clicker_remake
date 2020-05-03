@@ -17,7 +17,15 @@ export const updateBakery = (element) => {
 export const clickCookie = (element) => {
     let bigCookie = document.getElementById('bigCookie');
 
-    bigCookie.addEventListener('click', () => {
-    cookiesStock.innerHTML = element.bakeCookies();
+    bigCookie.addEventListener('click', (event) => {
+        cookiesStock.innerHTML = element.bakeCookies();
 
+        // Création de la div + affichage dans BigCookie
+        let animationText = document.createElement('div');
+        animationText.classList = "animationText";
+        animationText.innerHTML = "+1";
+        bigCookie.appendChild(animationText);
+
+        animationText.style.top = event.clientY + "px";
+        animationText.style.left = event.clientX + "px";
     })}

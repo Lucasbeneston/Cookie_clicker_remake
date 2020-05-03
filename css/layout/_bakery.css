@@ -28,6 +28,7 @@
     margin-top: 75px;
     cursor: pointer;
     transition: transform 0.5s;
+    position: relative;
 }
 
 #bigCookie:hover{
@@ -37,3 +38,33 @@
 #bigCookie:active{
     transform: scale(0.95);
 }
+
+.animationText{
+    position: absolute;
+    margin-top: -215px;
+    margin-left: -80px;
+    font-size: 1.3rem;
+
+    animation-duration: 3s;
+    animation-name: opacity;
+    opacity: 0;
+}
+  
+  @keyframes opacity {
+    0%{
+        opacity: 1;
+    }
+
+    20%{
+        opacity: 0.5;
+    }
+
+    50%{
+        opacity: 0.2;
+    }
+  
+    100%{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+  }

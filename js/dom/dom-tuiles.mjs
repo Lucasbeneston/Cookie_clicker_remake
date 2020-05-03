@@ -13,24 +13,24 @@ export const updateTuile = () => {
 
         // Créer une div enfant avec la class"icon"
         let tuileIcon = document.createElement('div');
-        tuileIcon.className = 'icon';
+        tuileIcon.classList = 'icon';
         buildingTuile.appendChild(tuileIcon);
 
         // Créer une div enfant avec la class "name"
         let tuileName = document.createElement('div');
-        tuileName.className = 'name';
+        tuileName.classList = 'name';
         tuileName.innerHTML = buildings[i].name;
         buildingTuile.appendChild(tuileName);
 
         // Créer une div enfant avec la class "cost"
         let tuileCost = document.createElement('div');
-        tuileCost.className = 'cost';
+        tuileCost.classList = 'cost';
         tuileCost.innerHTML = buildings[i].cost;
         buildingTuile.appendChild(tuileCost);
 
         // Créer une div enfant avec la class "number"
         let tuileNumber = document.createElement('div');
-        tuileNumber.className = 'number';
+        tuileNumber.classList = 'number';
         buildingTuile.appendChild(tuileNumber);   
     }
 }

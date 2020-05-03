@@ -8,7 +8,11 @@ export default class Bakery{
         }
 
     bakeCookies(){
-        return this._cookies++ 
+        return this._cookies += this.cookiesPerClick 
+        // this._cookies = this._cookies + this.cookiesPerClick
+        // this._cookies = 0 + 1
+        // this._cookies = 1 + 1
+        // this._cookies = 2 + 1
     }
     
     get name(){
