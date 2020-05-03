@@ -1,5 +1,9 @@
 let cookiesStock = document.querySelector('#cookiesStock span')
 
+function entierAleatoire(min, max){
+ return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 export const updateBakery = (element) => {
 
     // Pour séléctionner le titre h2 de l'id bakery
@@ -26,10 +30,19 @@ export const clickCookie = (element) => {
         animationText.innerHTML = "+1";
         bigCookie.appendChild(animationText);
 
+        // Créer une balise "audio"
+        let audio = document.createElement('audio');
+        bigCookie.appendChild(audio);
+
+        // Aouter du texte 
+        audio.src = `/assets/sounds/click${entierAleatoire(1, 7)}.mp3`
+        audio.play();
+
         animationText.style.top = event.clientY + "px";
         animationText.style.left = event.clientX + "px";
 
         bigCookie.addEventListener('animationend', () =>{
             bigCookie.removeChild(animationText);
+            bigCookie.removeChild(audio);
         })
     })}
