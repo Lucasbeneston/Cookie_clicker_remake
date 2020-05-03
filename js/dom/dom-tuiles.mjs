@@ -4,7 +4,7 @@ const buildingsDiv = document.getElementById('buildings');
 
 export const updateTuile = () => {
     
-    for (let i = 0; i < buildings.length - 3; i++){
+    for (let i = 0; i < buildings.length; i++){
         // Créer une div parent avec un id "building-cursor" et une class "locked disabled
         let buildingTuile = document.createElement('div');
         buildingTuile.id = `building-${buildings[i].name.toLowerCase()}`;

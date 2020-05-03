@@ -46,7 +46,7 @@
     font-size: 1.3rem;
     font-weight: bold;
 
-    animation-duration: 10s;
+    animation-duration: 3s;
     animation-name: opacityAnimation;
     opacity: 0;
 }
