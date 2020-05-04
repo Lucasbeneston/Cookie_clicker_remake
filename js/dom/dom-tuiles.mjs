@@ -4,7 +4,7 @@ const buildingsDiv = document.getElementById('buildings');
 
 export const updateTuile = () => {
 
-    for (let i = 0; i < buildings.length -3; i++){
+    for (let i = 0; i < buildings.length; i++){
         // Créer une div parent avec un id "building-cursor" et une class "locked disabled
         let buildingTuile = document.createElement('div');
         buildingTuile.id = `building-${buildings[i].name.toLowerCase()}`;
@@ -31,27 +31,35 @@ export const updateTuile = () => {
         // Créer une div enfant avec la class "number"
         let tuileNumber = document.createElement('div');
         tuileNumber.classList = 'number';
-        buildingTuile.appendChild(tuileNumber);   
+        buildingTuile.appendChild(tuileNumber); 
+        
+        if (i < buildings.length - 3){
+            buildingTuile.style.display = "flex"
+        } else {
+            buildingTuile.style.display = "none"
+        }
     }
 }
 
 
 export const mecanismeTuiles = (monObjet) => {
 
-    for (let i = 0; i < buildings.length -1; i++){
+    for (let i = 0; i < buildings.length; i++){
     
         if (monObjet.cookies >= buildings[i].cost){
             let tuiles = document.getElementById(`building-${buildings[i].name.toLowerCase()}`);
-            let tuileUnlocket = document.getElementById(`building-${buildings[i+1].name.toLowerCase()}`);
-            
+            let tuileUnlocked = document.getElementById(`building-${buildings[i+1].name.toLowerCase()}`);
+            let tuileAfter = document.getElementById(`building-${buildings[i+2].name.toLowerCase()}`);
+            tuileAfter.style.display = "flex"
+
             tuiles.classList.remove('locked')
             tuiles.classList.add('unlocked')
 
             tuiles.classList.remove('disabled')
             tuiles.classList.add('enabled')
 
-            tuileUnlocket.classList.remove('locked')
-            tuileUnlocket.classList.add('unlocked')
+            tuileUnlocked.classList.remove('locked')
+            tuileUnlocked.classList.add('unlocked')
         }
     }
 }
