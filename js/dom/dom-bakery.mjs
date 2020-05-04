@@ -6,26 +6,25 @@ function entierAleatoire(min, max){
  return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export const updateBakery = (element) => {
+export const updateBakery = (monObjet) => {
 
     // Pour séléctionner le titre h2 de l'id bakery
     let bakeryName = document.querySelector('#bakery h2');
-    bakeryName.innerHTML = element.name;
+    bakeryName.innerHTML = monObjet.name;
 
     // Pour séléctionner la valeur "?" de "cookies"
-    cookiesStock.innerHTML = element.cookies;
+    cookiesStock.innerHTML = monObjet.cookies;
 
     // Pour séléctionner la valeur "?" de "cookies per second :"
     let cookiesPerSecond = document.querySelector('#cookiesPerSecond span')
-    cookiesPerSecond.innerHTML = element.cookiesPerSecond;
+    cookiesPerSecond.innerHTML = monObjet.cookiesPerSecond;
 }
 
-export const clickCookie = (element) => {
+export const clickCookie = (monObjet) => {
     let bigCookie = document.getElementById('bigCookie');
 
     bigCookie.addEventListener('click', (event) => {
-        cookiesStock.innerHTML = element.bakeCookies();
-        mecanismeTuiles(element)
+        cookiesStock.innerHTML = monObjet.bakeCookies();
 
         // Création de la div + affichage dans BigCookie
         let animationText = document.createElement('div');
@@ -47,4 +46,6 @@ export const clickCookie = (element) => {
             bigCookie.removeChild(animationText);
             bigCookie.removeChild(audio);
         })
+
+        mecanismeTuiles(monObjet)
     })}

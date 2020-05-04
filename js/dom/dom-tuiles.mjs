@@ -36,9 +36,9 @@ export const updateTuile = () => {
 }
 
 
-export const mecanismeTuiles = (element) => {
+export const mecanismeTuiles = (monObjet) => {
     for (let i = 0; i < buildings.length; i++){
-        if (element.cookies >= buildings[i].cost){
+        if (monObjet.cookies >= buildings[i].cost){
             let tuiles = document.getElementById(`building-${buildings[i].name.toLowerCase()}`);
 
             tuiles.classList.remove('locked')

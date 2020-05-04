@@ -4,11 +4,10 @@ import {clickCookie} from "./dom/dom-bakery.mjs";
 
 import {updateBakery} from "./dom/dom-bakery.mjs";
 import {updateTuile} from "./dom/dom-tuiles.mjs";
-import {mecanismeTuiles} from "./dom/dom-tuiles.mjs";
 
-const newBakery = new Bakery();
-updateBakery(newBakery);
+const nomObjetBakery = new Bakery();
+updateBakery(nomObjetBakery);
 
-clickCookie(newBakery);
+clickCookie(nomObjetBakery);
 
 updateTuile();
