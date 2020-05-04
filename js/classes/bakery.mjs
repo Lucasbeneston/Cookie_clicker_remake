@@ -7,12 +7,11 @@ export default class Bakery{
         this._buidlings = []
         }
 
-    bakeCookies(){
-        return this._cookies += this.cookiesPerClick 
-        // this._cookies = this._cookies + this.cookiesPerClick
-        // this._cookies = 0 + 1
-        // this._cookies = 1 + 1
-        // this._cookies = 2 + 1
+    // bakeCookies(){
+    //     return this._cookies += this.cookiesPerClick 
+    bakeCookies(howMany){
+        howMany = this.cookiesPerClick
+        return this._cookies += howMany
     }
     
     get name(){

@@ -1,3 +1,5 @@
+import {mecanismeTuiles} from '../dom/dom-tuiles.mjs'
+
 let cookiesStock = document.querySelector('#cookiesStock span')
 
 function entierAleatoire(min, max){
@@ -23,12 +25,15 @@ export const clickCookie = (element) => {
 
     bigCookie.addEventListener('click', (event) => {
         cookiesStock.innerHTML = element.bakeCookies();
+        mecanismeTuiles(element)
 
         // Création de la div + affichage dans BigCookie
         let animationText = document.createElement('div');
         animationText.classList = "animationText";
         animationText.innerHTML = "+1";
         bigCookie.appendChild(animationText);
+        animationText.style.top = event.clientY + "px";
+        animationText.style.left = event.clientX + entierAleatoire(0, 5) + "px";
 
         // Créer une balise "audio"
         let audio = document.createElement('audio');
@@ -37,9 +42,6 @@ export const clickCookie = (element) => {
         // Aouter du texte 
         audio.src = `/assets/sounds/click${entierAleatoire(1, 7)}.mp3`
         audio.play();
-
-        animationText.style.top = event.clientY + "px";
-        animationText.style.left = event.clientX + "px";
 
         bigCookie.addEventListener('animationend', () =>{
             bigCookie.removeChild(animationText);

@@ -34,3 +34,18 @@ export const updateTuile = () => {
         buildingTuile.appendChild(tuileNumber);   
     }
 }
+
+
+export const mecanismeTuiles = (element) => {
+    for (let i = 0; i < buildings.length; i++){
+        if (element.cookies >= buildings[i].cost){
+            let tuiles = document.getElementById(`building-${buildings[i].name.toLowerCase()}`);
+
+            tuiles.classList.remove('locked')
+            tuiles.classList.add('unlocked')
+
+            tuiles.classList.remove('disabled')
+            tuiles.classList.add('enabled')
+        }
+    }
+}
