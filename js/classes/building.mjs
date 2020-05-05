@@ -1,12 +1,15 @@
-// import {buildings} from "js/data.mjs"
-
 export default class Building{
-    constructor({name, description, cookiesPerSecond, cost}, number = 0) {
+    constructor(name, description, cookiesPerSecond, cost, number = 0) {
         this._name = name
         this._description = description
         this._cookiesPerSecond = cookiesPerSecond
         this._cost = cost
         this._number = number
+    }
+
+    buy(){
+        this._number++
+        this._cost = Math.ceil(this._cost * 1.15);
     }
 
     get name(){
@@ -27,5 +30,13 @@ export default class Building{
 
     get number(){
         return this._number
+    }
+
+    set number(newNumber){
+        this._number = newNumber
+    }
+
+    set cost(newCost){
+        this._cost = newCost
     }
 }

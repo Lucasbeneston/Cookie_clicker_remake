@@ -1,6 +1,6 @@
 import {buildings} from "../../js/data.mjs"
 
-const buildingsDiv = document.getElementById('buildings');
+let buildingsDiv = document.getElementById('buildings');
 
 export const updateTuile = () => {
 
@@ -50,7 +50,6 @@ export const mecanismeTuiles = (monObjet) => {
             let tuiles = document.getElementById(`building-${buildings[i].name.toLowerCase()}`);
             let tuileUnlocked = document.getElementById(`building-${buildings[i+1].name.toLowerCase()}`);
             let tuileAfter = document.getElementById(`building-${buildings[i+2].name.toLowerCase()}`);
-            tuileAfter.style.display = "flex"
 
             tuiles.classList.remove('locked')
             tuiles.classList.add('unlocked')
@@ -60,23 +59,44 @@ export const mecanismeTuiles = (monObjet) => {
 
             tuileUnlocked.classList.remove('locked')
             tuileUnlocked.classList.add('unlocked')
+
+            tuileAfter.style.display = "flex"
         }
     }
 }
 
 
+// export const buyBuildings = (monObjet) =>{
+//     buildingDiv.forEach(tuile => tuile.addEventListener('click', () => {
+//         let cost = document.querySelector('.cost');
+//         let number = document.querySelector('.number');
 
-// // Faire en fonction des numéros dans la class Buildings
-// // export const apparitionTuiles = () =>{
-//     for (let i = 0; i < buildings.length; i++){
-//         if (monObjet.cookies >= buildings[i].cost){
-//             let tuiles = document.getElementById(`building-${buildings[i].name.toLowerCase()}`);
+//         console.log(cost);
+//         console.log(number);
+//         // Acheter de manière effective un bâtiment en utilisant buy()
+//             // Séléctionner le number 
 
-//             tuiles.classList.remove('unlocked')
-//             tuiles.classList.add('locked')
-
-//             tuiles.classList.remove('enabled')
-//             tuiles.classList.add('disabled')
-//         }
-//     }  
+//         // Mettre à jour la tuile dans le ​Store​
+//             // Afficher le nouveau côut dans la div ​.cost​ 
+//             // Afficher le nouveau nombre de bâtiments possédés dans la div ​.number
+//     }))
 // }
+
+export const buyTuiles = (monObjet) => {
+
+    const divMere = document.getElementById('buildings').childNodes
+    console.log(divMere)
+    divMere.forEach(tuile => tuile.addEventListener('click', () => {
+        let tuileCost = tuile.childNodes[2]
+        let tuileNumber = tuile.childNodes[3]
+
+        monObjet.cost = tuileCost.innerHTML
+        monObjet.number = tuileNumber.innerHTML
+
+        monObjet.buy()
+
+        tuileCost.innerHTML = monObjet.cost
+        tuileNumber.innerHTML = monObjet.number
+
+    }));
+}

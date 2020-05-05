@@ -1,3 +1,5 @@
+import { buildings } from "../data.mjs"
+
 export default class Bakery{
     constructor(name = "Simplon Bakery", cookies = 0, cookiesPerClick = 1, cookiesPerSecond = 0){
         this._name = name
