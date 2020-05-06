@@ -135,21 +135,14 @@
 
 .number{
     position:absolute;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bold;
   color:rgba(49, 45, 45, 0.479);
   right:10px;
-  top:20px;
+  top:10px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
+#buildings > div:active{
+    box-shadow: inset 0px 0px 15px 3px #000000;
+    transition: 0.5s;
+}

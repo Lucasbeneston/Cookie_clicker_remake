@@ -2,6 +2,10 @@ import {buildings} from "../../js/data.mjs"
 
 let buildingsDiv = document.getElementById('buildings');
 
+function entierAleatoire(min, max){
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+   }
+
 export const updateTuile = () => {
 
     for (let i = 0; i < buildings.length; i++){
@@ -66,27 +70,11 @@ export const mecanismeTuiles = (monObjet) => {
 }
 
 
-// export const buyBuildings = (monObjet) =>{
-//     buildingDiv.forEach(tuile => tuile.addEventListener('click', () => {
-//         let cost = document.querySelector('.cost');
-//         let number = document.querySelector('.number');
-
-//         console.log(cost);
-//         console.log(number);
-//         // Acheter de manière effective un bâtiment en utilisant buy()
-//             // Séléctionner le number 
-
-//         // Mettre à jour la tuile dans le ​Store​
-//             // Afficher le nouveau côut dans la div ​.cost​ 
-//             // Afficher le nouveau nombre de bâtiments possédés dans la div ​.number
-//     }))
-// }
-
 export const buyTuiles = (monObjet) => {
 
     const divMere = document.getElementById('buildings').childNodes
-    console.log(divMere)
     divMere.forEach(tuile => tuile.addEventListener('click', () => {
+        audioBuy()
         let tuileCost = tuile.childNodes[2]
         let tuileNumber = tuile.childNodes[3]
 
@@ -97,6 +85,19 @@ export const buyTuiles = (monObjet) => {
 
         tuileCost.innerHTML = monObjet.cost
         tuileNumber.innerHTML = monObjet.number
-
     }));
+}
+
+const audioBuy = () => {
+        // Créer une balise "audio"
+        let audio = document.createElement('audio');
+        buildingsDiv.appendChild(audio);
+
+        // Aouter du texte 
+        audio.src = `/assets/sounds/buy${entierAleatoire(1, 4)}.mp3`
+        audio.play();
+
+        audio.addEventListener('ended', () =>{
+            buildingsDiv.removeChild(audio);
+        })
 }
