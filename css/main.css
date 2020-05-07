@@ -1,15 +1,15 @@
-@import url("./base/_fonts.css");
+@import "./base/_fonts.css";
 
-@import url("./base/_reset.css");
+@import "./base/_reset.css";
 
-@import url("./base/_typography.css");
+@import "./base/_typography.css";
 
-@import url("./layout/_bakery.css");
+@import "./layout/_bakery.css";
 
-@import url("./layout/_production.css");
+@import "./layout/_production.css";
 
-@import url("./layout/_separateurs.css");
+@import "./layout/_separateurs.css";
 
-@import url("./layout/_store.css");
+@import "./layout/_store.css";
 
-@import url("./pages/_body.css");
+@import "./pages/_body.css";
