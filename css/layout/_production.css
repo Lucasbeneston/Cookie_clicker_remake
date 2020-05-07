@@ -2,7 +2,7 @@
     height: 100vh;
     padding-top: 15px;
     min-width: 500px;
-    flex-grow: 2;
+    flex: 2;
     overflow-y: scroll;
     background: linear-gradient(180deg, rgba(0,0,0,0.85) 0%, rgba(0,0,0,0.25) 25%);
     display: flex;
